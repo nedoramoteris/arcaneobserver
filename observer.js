@@ -54,16 +54,24 @@ document.addEventListener('DOMContentLoaded', function() {
         downloadBtn.addEventListener('click', function() {
             const element = document.getElementById('content-to-print');
             const opt = {
-                margin: 10,
-                filename: 'The_Arcane_Observer.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { 
-                    scale: 2,
-                    backgroundColor: '#0a0a0a',
-                    useCORS: true 
-                },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-            };
+    margin: 0, // Changed from 10 to 0 to remove margins
+    filename: 'The_Arcane_Observer.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { 
+        scale: 1,
+        backgroundColor: null, // Set to null to avoid white background
+        useCORS: true,
+        scrollX: 0, // Ensure no horizontal scroll offset
+        scrollY: 0, // Ensure no vertical scroll offset
+        windowWidth: document.documentElement.scrollWidth // Use full width
+    },
+    jsPDF: { 
+        unit: 'mm', 
+        format: 'a4', 
+        orientation: 'portrait',
+        compress: true
+    }
+};
 
             downloadBtn.style.display = 'none';
             
