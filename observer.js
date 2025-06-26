@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     filename: 'The_Arcane_Observer.pdf',
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { 
-        scale: 1,
+        scale: 2,
         backgroundColor: null, // Set to null to avoid white background
         useCORS: true,
         scrollX: 0, // Ensure no horizontal scroll offset
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     jsPDF: { 
         unit: 'mm', 
         format: 'a4', 
-        orientation: 'portrait',
+        orientation: 'landscape',
         compress: true
     }
 };
