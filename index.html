@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Arcane Observer</title>
+    <link rel="stylesheet" href="observer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container" id="content-to-print">
+        <header>
+            <div class="header-top">
+                <div class="date">Trečiadienis, 2024 m. lapkričio 20 d.</div>
+                <div class="edition">Vol. XLII, No. 13</div>
+                <button id="download-pdf" class="download-btn">Atsisiųsti PDF</button>
+            </div>
+            <h1>The Arcane Observer</h1>
+            <p class="tagline">Your premier source for all things supernatural.</p>
+        </header>
+
+        <div class="breaking-news">
+            <div class="breaking-label">BREAKING</div>
+            <div class="breaking-content">
+                <h3>Medžiotojai prieš medžiotojus: šūviai konferencijoje</h3>
+                <p>Ketvirčio konferencijoje, skirtoje aptarti naujausius išradimus, palengvinsiančius medžiotojų darbą, įvyko incidentas, kurio metu vienas iš dalyvavusiųjų medžiotojų ginklu pasikėsino į Tarybos Narės, atsakingos už medžiotojus, Demetrijos Harlow ir vyriausiojo laboranto Mykolo Harlow gyvybes. Pirminiais duomenimis, rimtai nukentėjusiųjų nėra (nuolat pildoma). </p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <section class="headlines-section">
+                <h2>Šios savaitės numeryje:</h2>
+                <div class="headlines-container" id="headlines-container">
+                    <!-- Headlines will be loaded dynamically from the text file -->
+                </div>
+            </section>
+
+            <aside class="interview-section">
+                <h2>Mėnesio pokalbis</h2>
+                <div class="interview-card">
+                    <div class="interview-image">
+    <img src="https://i.imgur.com/3ET7yBv.jpeg" alt="Dr. Elara Voss">
+</div>
+                    <div class="interview-content">
+                        <h3>Dr. Elara Voss: Senovės kalbų šifravimas naudojant dirbtinį intelektą</h3>
+                        <p class="interview-teaser">Žymi lingvistė ir technomancerė pasakoja apie savo novatorišką darbą, kuriame dirbtinis intelektas derinamas su tradiciniais aiškiaregystės metodais, siekiant iššifruoti tekstus, kurie anksčiau buvo laikomi neįskaitomais...</p>
+                        <a href="#" class="read-more">Pilnas interviu →</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <section class="subscribe-section">
+          <h2>Subscribe to The Arcane Observer</h2>
+            <div class="subscribe-options">
+                <div class="subscribe-option">
+                    <h3>Digital Edition</h3>
+                    <p class="price">€9.99<span> / mėn.</span></p>
+                    <ul>
+                        <li>Unlimited online access</li>
+                        <li>Daily updates</li>
+                        <li>Archives back to 1783</li>
+                    </ul>
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+                <div class="subscribe-option featured">
+                    <div class="popular-tag">Most popular</div>
+                    <h3>Print + Digital</h3>
+                    <p class="price">€19.99<span> / mėn.</span></p>
+                    <ul>
+                        <li>Weekly printed edition</li>
+                        <li>All digital benefits</li>
+                        <li>Special collector's inserts</li>
+                    </ul>
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+                <div class="subscribe-option">
+                    <h3>Premium Membership</h3>
+                    <p class="price">€29.99<span> / mėn.</span></p>
+                    <ul>
+                        <li>All Print + Digital benefits</li>
+                        <li>Exclusive events access</li>
+                        <li>Personalized divination report</li>
+                    </ul>
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Archive</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="copyright">
+                    For supernatural eyes only. Mortals risk more than just disbelief.<br>© 2025 The Arcane Observer.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="subscribe-modal" id="subscribe-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Complete Your Subscription</h2>
+            <form id="subscribe-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="plan">Subscription Plan</label>
+                    <select id="plan" required>
+                        <option value="">Select a plan</option>
+                        <option value="digital">Digital Edition - $9.99/month</option>
+                        <option value="print-digital">Print + Digital - $14.99/month</option>
+                        <option value="premium">Premium Membership - $29.99/month</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="payment">Payment Method</label>
+                    <select id="payment" required>
+                        <option value="">Select payment method</option>
+                        <option value="credit">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="crypto">Cryptocurrency</option>
+                        <option value="barter">Magical Barter (Contact Us)</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Complete Subscription</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="observer.js"></script>
+</body>
+</html>
